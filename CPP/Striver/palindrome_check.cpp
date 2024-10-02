@@ -14,6 +14,6 @@ bool palindrome(int i,std::string &s){
 int main(){
     std::string s;
     std::cin >> s;
-    std::cout<<palindrome(0, s);
+    std::cout<<palindrome(0, s)<<std::endl;
     return 0;
 }
