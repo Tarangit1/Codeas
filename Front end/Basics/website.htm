@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="scipt" href="script.js">
+<script>
+    let num1=parseInt(prompt("Enter a Number"));
+    let opr=prompt("Enter Operator < +,-,*,/,%");
+    let num2=parseInt(prompt("Enter a Number"));
+    let res;
+    switch(opr)
+         {
+             case '+':
+             res=num1+num2;
+             break;
+             case '-':
+             res=num1-num2;
+             break;
+             case '*':
+             res=num1*num2;
+             break;
+             case '/':
+             res=num1/num2;
+             break;
+             case '%':
+             res=num1%num2;
+             break;
+             default:
+                 res="Incvalid Operator";
+         }
+ 
+         document.write("Result="+res);</script></head>
+<body>
+    
+</body>
+</html>

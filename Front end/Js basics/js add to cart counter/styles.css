@@ -1,0 +1,66 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #000000;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Button styles */
+button {
+    background: linear-gradient(40deg, #d4ff00, #6542ef);
+    border: none;
+    border-radius: 50px;
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: translateY(0);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Specific button styles */
+#showQuantityBtn {
+    background: linear-gradient(45deg, #5058f1, #7d6d7371);
+}
+
+#addToCartBtn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+#plus2Btn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+#plus3Btn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}
+
+#resetCartBtn {
+    background: linear-gradient(45deg, #6a11cb, #2575fc);
+}

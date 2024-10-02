@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <form id="driving">
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" required>
+        <button type="submit"> Check Eligibility </button>
+
+    </form>
+    <p id="result"></p>
+
+
+    <script>
+        document.getElementById('driving').addEventListener('submit',function(event){
+            event.preventDefault()
+        const age = document.getElementById('age').value;
+        const result = document.getElementById('result');
+        if (age >= 18){
+            result.textContent = 'Eligible';
+            console.log("kjjdsflkjdfsjklfds eligible")
+        } else{
+            result.textContent = 'Not Eligible';
+            console.log("not eligible")
+        }
+        });
+        
+    </script>
+</body>
+</html>
