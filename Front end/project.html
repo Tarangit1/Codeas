@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .sidebar {
+          display: flex;
+          margin-top: 7px;
+          flex-direction: column;
+          color: #fff;
+          font: 600 13px Inter, sans-serif;
+        }
+        
+        .profile-image {
+          aspect-ratio: 1.04;
+          object-fit: contain;
+          width: 57px;
+          border-radius: 50%;
+        }
+        
+        .navigation-container {
+          border-radius: 41px;
+          background-color: #000;
+          display: flex;
+          margin-top: 13px;
+          width: 100%;
+          flex-direction: column;
+          align-items: center;
+          padding: 48px 1px 0;
+        }
+        
+        .nav-item {
+          display: flex;
+          flex-direction: column;
+          border-radius: 55px;
+          position: relative;
+          aspect-ratio: 3.418;
+          width: 100%;
+          gap: 10px;
+          padding: 18px 16px;
+        }
+        
+        .nav-item-background {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        
+        .nav-icon {
+          aspect-ratio: 1.1;
+          object-fit: contain;
+          width: 22px;
+        }
+        
+        .nav-text {
+          position: relative;
+          flex-grow: 1;
+          width: 120px;
+        }
+        
+        .post-button {
+          display: flex;
+          flex-direction: column;
+          position: relative;
+          border-radius: 55px;
+          align-self: stretch;
+          aspect-ratio: 3.5;
+          margin-top: 49px;
+          width: 100%;
+          font-size: 16px;
+          text-align: center;
+          padding: 29px 70px;
+        }
+        
+        .post-button-background {
+          position: absolute;
+          inset: 0;
+          height: 100%;
+          width: 100%;
+          object-fit: cover;
+        }
+        
+        .post-button-text {
+          position: relative;
+        }
+        
+        @media (max-width: 991px) {
+          .sidebar {
+            margin-top: 40px;
+          }
+        
+          .navigation-container {
+            white-space: initial;
+          }
+        
+          .nav-item {
+            white-space: initial;
+          }
+        
+          .post-button {
+            margin-top: 40px;
+            padding: 0 20px;
+          }
+        }
+        </style>
+</head>
+<body>
+   
+        
+        <nav class="sidebar">
+          <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c448ef8783a7b208452406e4040f0d20f7b85a24dd81a78e7bfd55649f255653?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="profile-image" alt="User profile" />
+          <div class="navigation-container">
+            <a href="#" class="nav-item">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/541106394f13b98a0931c670950b46cb39ea5f13720c42052b99a37107da5c83?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-item-background" alt="" />
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/94b4cfd7eb461f55ae7e0b66744990b3e4b0502238701d3bdfb2203960269d0f?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-icon" alt="Home icon" />
+              <span class="nav-text">Home</span>
+            </a>
+            <a href="#" class="nav-item">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/541106394f13b98a0931c670950b46cb39ea5f13720c42052b99a37107da5c83?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-item-background" alt="" />
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/ff6a10a84f300e47dc0575ffe5d5ff1089aa7f15d02be22f7d4930167c900faa?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-icon" alt="Explore icon" />
+              <span class="nav-text">Explore</span>
+            </a>
+            <a href="#" class="nav-item">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/541106394f13b98a0931c670950b46cb39ea5f13720c42052b99a37107da5c83?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-item-background" alt="" />
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/c9b1f469f9cd61988ba7d1e77fa6aedc7a83faa5bc4b63b6967359a19e03c196?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-icon" alt="Notifications icon" />
+              <span class="nav-text">Notifications</span>
+            </a>
+            <a href="#" class="nav-item">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/541106394f13b98a0931c670950b46cb39ea5f13720c42052b99a37107da5c83?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-item-background" alt="" />
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/b853855deb9e26a8b64e16a41190a4ec0bfcaf9a3204b53295567090d76f2bc3?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="nav-icon" alt="Settings icon" />
+              <span class="nav-text">Settings</span>
+            </a>
+            <button class="post-button">
+              <img loading="lazy" src="https://cdn.builder.io/api/v1/image/assets/TEMP/f3646001d989ed6004d0a8849ec01cb4572be13aa5239ddf380c3d3a265cd19e?placeholderIfAbsent=true&apiKey=b2a824f7462745fba4cc6de55eac5b14" class="post-button-background" alt="" />
+              <span class="post-button-text">POST</span>
+            </button>
+          </div>
+        </nav>
+    
+</body>
+</html>
