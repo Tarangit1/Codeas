@@ -10,6 +10,6 @@ int f(int n){
 int main(){
     int n;
     std::cin >> n;
-    std::cout << f(n);
+    std::cout << f(n) << std::endl;
     return 0;
 }

@@ -7,6 +7,8 @@ pnamen(i+1,n);
 
 }
 
+
+
 //2. print linearly from 1 to N
 void p1ton(int i,int n){
 if(i>n) return;
