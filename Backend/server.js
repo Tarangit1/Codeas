@@ -2,9 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+
 const app = express();
 const port = 3000;
 
+app.use(cors());
 app.use(bodyParser.json());
 
 // Serve static files
@@ -14,34 +17,20 @@ app.use(express.static(path.join(__dirname)));
 app.get('/', (req, res) => {
     const filePath = path.join(__dirname, 'index.html');
     console.log(`Serving file: ${filePath}`);
-    res.sendFile(filePath, (err) => {
-        if (err) {
-            console.error('Error serving index.html:', err);
-            res.status(500).send('Server error');
-        }
-    });
+    res.sendFile(filePath);
 });
 
 app.post('/register', (req, res) => {
-    const { name, email, password } = req.body;
-    const user = { name, email, password };
+    const { name, email, password, age, city, pincode, phone } = req.body;
+    const user = { name, email, password, age, city, pincode, phone };
 
     // Read existing data
     fs.readFile('users.json', (err, data) => {
-        if (err && err.code !== 'ENOENT') {
-            console.error('Error reading file:', err);
-            return res.status(500).send('Server error');
-        }
-
         const users = data ? JSON.parse(data) : [];
         users.push(user);
 
         // Write updated data
-        fs.writeFile('users.json', JSON.stringify(users, null, 2), (err) => {
-            if (err) {
-                console.error('Error writing file:', err);
-                return res.status(500).send('Server error');
-            }
+        fs.writeFile('users.json', JSON.stringify(users, null, 2), () => {
             res.status(200).send('Registration successful');
         });
     });
@@ -49,18 +38,17 @@ app.post('/register', (req, res) => {
 
 app.get('/users', (req, res) => {
     fs.readFile('users.json', (err, data) => {
-        if (err && err.code !== 'ENOENT') {
-            console.error('Error reading file:', err);
-            return res.status(500).send('Server error');
-        }
-
         const users = data ? JSON.parse(data) : [];
-        const usersWithPasswords = users.map(user => ({
+        const usersWithDetails = users.map(user => ({
             name: user.name,
             email: user.email,
-            password: user.password // Add this line
+            password: user.password,
+            age: user.age,
+            city: user.city,
+            pincode: user.pincode,
+            phone: user.phone
         }));
-        res.status(200).json(usersWithPasswords);
+        res.status(200).json(usersWithDetails);
     });
 });
 
